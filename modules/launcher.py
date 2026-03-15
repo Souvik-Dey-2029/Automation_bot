@@ -4,7 +4,7 @@ import time
 
 def launch_environment():
     
-    print("Launching Coding Environmment")
+    print("Launching Coding Environmment..............")
 
     pya.press("win")
     time.sleep(1)
@@ -19,4 +19,5 @@ def launch_environment():
     time.sleep(3)
 
     web.open("https://chatgpt.com/")
+    time.sleep(2)
     web.open("https://github.com/")

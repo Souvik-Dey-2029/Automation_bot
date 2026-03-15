@@ -14,7 +14,7 @@ def monitor_downloads():
 
     while True:
 
-        time.sleep(10)  # check every 10 seconds
+        time.sleep(15)  # check every 10 seconds
 
         current_files = set(os.listdir(downloads_path))
 

@@ -1,4 +1,5 @@
 from modules.logger import log
+from modules.config_loader import load_config
 import os
 import shutil
 
@@ -7,7 +8,8 @@ def organize_downloads():
 
     print("Organizing Downloads folder...")
 
-    downloads_path = r"C:\Users\SOUVIK\Downloads"
+    config = load_config()
+    downloads_path = config["downloads_folder"]
 
     # File type categories
     file_types = {

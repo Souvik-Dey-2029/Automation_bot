@@ -3,6 +3,7 @@ from modules.launcher import launch_environment
 from modules.organizer import organize_downloads
 from modules.monitor import monitor_downloads
 from modules.screenshot_logger import screenshot_logger
+from modules.logger import log
 
 import threading
 
@@ -26,6 +27,7 @@ def run_full_automation():
     start_monitor()
     start_screenshot()
 
+log("Automation bot started")
 
 while True:
 

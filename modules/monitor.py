@@ -1,3 +1,4 @@
+from modules.logger import log
 import os
 import time
 from modules.organizer import organize_downloads
@@ -23,6 +24,7 @@ def monitor_downloads():
 
         if new_files:
             print("New file detected:", new_files)
+            log(f"New file detected: {new_files}")
             organize_downloads()
 
         previous_files = current_files

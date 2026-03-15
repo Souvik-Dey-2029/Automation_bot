@@ -1,3 +1,4 @@
+from modules.logger import log
 import pyautogui as pya
 import os
 import time
@@ -14,4 +15,5 @@ def screenshot_logger():
         screenshot = pya.screenshot()
         screenshot.save(filename)
         print(f"Screenshot saved: {filename}")
+        log(f"Screenshot saved: {filename}")
         time.sleep(60)

@@ -1,3 +1,4 @@
+from modules.logger import log
 import os
 import shutil
 
@@ -44,7 +45,7 @@ def organize_downloads():
                 shutil.move(item_path, destination)
 
                 print(f"Moved: {item} → {folder}")
-
+                log(f"Moved file {item} to {folder}")
                 moved_files += 1
                 break
 

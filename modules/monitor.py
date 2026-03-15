@@ -1,4 +1,5 @@
 from modules.logger import log
+from modules.config_loader import load_config
 import os
 import time
 from modules.organizer import organize_downloads
@@ -6,7 +7,9 @@ from modules.organizer import organize_downloads
 
 def monitor_downloads():
 
-    downloads_path = r"C:\Users\SOUVIK\Downloads"
+    config = load_config()
+    downloads_path = config["downloads_folder"]
+    interval = config["monitor_interval"]
 
     print("Download Monitor Started...")
     print("Watching for new files...\n")
@@ -15,7 +18,7 @@ def monitor_downloads():
 
     while True:
 
-        time.sleep(15)  # check every 10 seconds
+        time.sleep(interval)
 
         current_files = set(os.listdir(downloads_path))
 
